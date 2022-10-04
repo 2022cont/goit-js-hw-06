@@ -15,15 +15,7 @@ const images = [
 
 const imagesdList = document.querySelector('.gallery');
 
-const imagesItem = images.map(opption => {
-  const imgEl = document.createElement('img');
-  imgEl.className = 'item_gallery';
-  imgEl.src = opption.url;
-  imgEl.alt = opption.alt;
-  imgEl.width = 450;
-  imgEl.height = 250;
-  return imgEl;
+const imageEl = images.map((image) =>`<li><img class='item_gallery' src = ${image.url} alt = ${image.alt} width = "450px" height = "250px"></img></li>`);
+console.log(imageEl);
+imagesdList.insertAdjacentHTML("afterbegin",imageEl.join(''));
 
-});
-imagesdList.append(...imagesItem);
-console.log(imagesItem);

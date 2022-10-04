@@ -9,9 +9,9 @@ buttonIncrem.addEventListener('click',handleButtonIncremClick);
 
 function handleButtonDecremClick() {
    counterValue -= 1;
-         buttonDecrem.textContent = `${counterValue}`;
+         document.querySelector('#value').textContent = `${counterValue}`;
 };
 function handleButtonIncremClick() {
     counterValue += 1;
-         buttonIncrem.textContent = `${counterValue}`;
+         document.querySelector('#value').textContent = `${counterValue}`;
 };
